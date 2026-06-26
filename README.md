@@ -84,6 +84,26 @@ The game runs in **landscape, fullscreen immersive**.
 
 ---
 
+## Browser-playable preview (`web/`)
+
+The `web/` folder contains an **HTML5 Canvas** port of the same game — identical
+design (floating joystick + drag-to-aim skillshots, auto-attack, enemies,
+XP/level-ups, menus). It runs in any modern browser, desktop or mobile, with no
+build step, so you can play/preview without the Android toolchain.
+
+```bash
+cd web
+python3 -m http.server 8099
+# then open http://localhost:8099/ (or your phone on the same network)
+```
+
+- **Touch**: left thumb = move joystick; right pads = skills (tap = auto-aim,
+  drag = aim then release to fire).
+- **Desktop**: WASD/arrows move, mouse aims, `Q W E R` (or `1-4`) cast,
+  click to start / pick upgrades, `P` pauses.
+
+The native Kotlin project under `app/` remains the target Android build.
+
 ## Project layout
 
 ```
